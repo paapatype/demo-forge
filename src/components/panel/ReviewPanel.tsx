@@ -7,6 +7,7 @@ import FamiliesFiltersSection from './sections/FamiliesFiltersSection'
 import VisualControlsSection from './sections/VisualControlsSection'
 import ThemingSection from './sections/ThemingSection'
 import ResearchPitchSection from './sections/ResearchPitchSection'
+import ClientQuestionsSection from './sections/ClientQuestionsSection'
 
 function Section({
   title,
@@ -54,6 +55,7 @@ export default function ReviewPanel() {
     (s) => !!s.analysis?.confidenceFlags.some((f) => !f.dismissed && f.severity === 'high'),
   )
   const researchRecCount = useAnalysisStore((s) => s.analysis?.research?.recommendations.length ?? 0)
+  const questionCount = useAnalysisStore((s) => s.analysis?.clientQuestions?.length ?? 0)
 
   return (
     <div className="pb-12">
@@ -97,6 +99,19 @@ export default function ReviewPanel() {
         }
       >
         <ResearchPitchSection />
+      </Section>
+
+      <Section
+        title="Questions for the client"
+        badge={
+          questionCount > 0 ? (
+            <span className="grid h-4 min-w-4 place-items-center rounded-full bg-charcoal px-1 font-mono text-[10px] text-cream">
+              {questionCount}
+            </span>
+          ) : undefined
+        }
+      >
+        <ClientQuestionsSection />
       </Section>
 
       {hasCatalog && (

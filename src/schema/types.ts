@@ -318,6 +318,29 @@ export interface Research {
   meta: ResearchMeta
 }
 
+// ───────────── client questions (v0.6 — contextual, generated with the analysis) ─────────────
+
+export type QuestionTheme =
+  | 'taxonomy'
+  | 'filters'
+  | 'imagery'
+  | 'variants'
+  | 'pricing'
+  | 'compliance'
+  | 'audience'
+  | 'scope'
+export type QuestionPriority = 'high' | 'medium' | 'low'
+
+/** A specific question to ask the client to build their catalogue better, grounded in THEIR PDF. */
+export interface ClientQuestion {
+  id: string
+  theme: QuestionTheme
+  question: string
+  /** Why it matters — tied to something concrete in this analysis (a flag, a unit, an ambiguity). */
+  why: string
+  priority: QuestionPriority
+}
+
 export interface Analysis {
   meta: Meta
   brand: Brand
@@ -329,6 +352,8 @@ export interface Analysis {
   confidenceFlags: ConfidenceFlag[]
   /** v0.5 merchandising research layer. Optional — plain v0 analyses omit it. */
   research?: Research
+  /** v0.6 contextual questions to ask the client, grounded in this PDF. Optional. */
+  clientQuestions?: ClientQuestion[]
 }
 
 // ───────────────────────────── enum value sets (for the validator/UI) ─────────────────────────────
@@ -351,6 +376,19 @@ export const THREE_D_TIERS: readonly ThreeDTier[] = ['A', 'B', 'C', 'D']
 export const AXIS_TYPES: readonly AxisType[] = ['categorical', 'numericRange', 'dimension']
 export const SPEC_INPUT_KINDS: readonly SpecInputKind[] = ['select', 'range', 'number', 'text']
 export const SEVERITIES: readonly Severity[] = ['info', 'warn', 'high']
+
+// client-question enums (v0.6)
+export const QUESTION_THEMES: readonly QuestionTheme[] = [
+  'taxonomy',
+  'filters',
+  'imagery',
+  'variants',
+  'pricing',
+  'compliance',
+  'audience',
+  'scope',
+]
+export const QUESTION_PRIORITIES: readonly QuestionPriority[] = ['high', 'medium', 'low']
 
 // research-layer enums (v0.5)
 export const SOURCE_KINDS: readonly SourceKind[] = ['study', 'book', 'video', 'exemplar', 'article']

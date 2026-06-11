@@ -305,5 +305,49 @@
       "message": "Napkin ‘printed’ finishes may include licensed seasonal artwork — confirm none are third-party trademarks before listing.",
       "severity": "high"
     }
+  ],
+  "clientQuestions": [
+    {
+      "id": "q-certs",
+      "theme": "compliance",
+      "question": "Which certifications do your buyers treat as hard requirements — FSC, EN 13432 compostable, PEFC? Those should be primary, prominent filters, not footer badges.",
+      "why": "Three of your trust signals are flagged as filter candidates; in foodservice procurement, compliance is often a gating buying criterion.",
+      "priority": "high"
+    },
+    {
+      "id": "q-pet-split",
+      "theme": "taxonomy",
+      "question": "Should PET and rPET cold cups stay one family, or split into two distinct lines?",
+      "why": "We merged them on a shared size chart (flagged) — splitting changes SKU counts and how buyers filter by material.",
+      "priority": "high"
+    },
+    {
+      "id": "q-napkin-trademark",
+      "theme": "compliance",
+      "question": "Do any napkin ‘printed’ designs include licensed or seasonal third-party artwork?",
+      "why": "Flagged as a trademark risk (high severity) — anything licensed must be excluded or handled separately before the catalogue ships.",
+      "priority": "high"
+    },
+    {
+      "id": "q-carriers",
+      "theme": "variants",
+      "question": "Are the 2-cup and 4-cup carrier trays separate products, or one configurable item?",
+      "why": "We modeled them as a single ‘configuration’ variant (flagged); confirming affects the family and SKU split.",
+      "priority": "medium"
+    },
+    {
+      "id": "q-lids-imagery",
+      "theme": "imagery",
+      "question": "Can you supply product photography for Universal Lids (currently missing) and the low-res families?",
+      "why": "Several families have weak or no imagery; lids render as a placeholder, which undercuts the live catalogue.",
+      "priority": "medium"
+    },
+    {
+      "id": "q-audience",
+      "theme": "audience",
+      "question": "Who's the primary buyer — independent cafés, distributors, or large caterers?",
+      "why": "It determines which filters lead and whether to emphasize the compostable lines or bulk/value ranges.",
+      "priority": "medium"
+    }
   ]
 }

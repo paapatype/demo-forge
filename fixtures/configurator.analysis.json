@@ -190,5 +190,49 @@
       "message": "Capability-led brochure with no discrete SKU table — classified as a configurator. Catalogue fit is weak; do not force a product grid.",
       "severity": "info"
     }
+  ],
+  "clientQuestions": [
+    {
+      "id": "q-quote-or-upload",
+      "theme": "scope",
+      "question": "Should the configurator end in a quote request only, or also let engineers upload a drawing / STEP file for known-item jobs?",
+      "why": "Engineering buyers split into known-item (they have a part) and exploratory; serving both is best practice and changes the flow.",
+      "priority": "high"
+    },
+    {
+      "id": "q-licensed-forms",
+      "theme": "compliance",
+      "question": "Which thread forms require customer-supplied licensing documentation — should the configurator gate or branch on those?",
+      "why": "Flagged on the thread-form axis; gating prevents quoting licensed profiles you can't fulfil without paperwork.",
+      "priority": "high"
+    },
+    {
+      "id": "q-sub-m1",
+      "theme": "variants",
+      "question": "Below M1 needs a fine-pitch capability review — should sub-M1 sizes trigger a special path or warning in the flow?",
+      "why": "Recorded as a constraint on the size-range axis; surfacing it avoids quoting jobs that need review first.",
+      "priority": "medium"
+    },
+    {
+      "id": "q-tiers",
+      "theme": "scope",
+      "question": "Do you want lead-time / capability tiers (standard / expedited / full-custom) offered as options?",
+      "why": "Tiering guides specification and anchors value; it isn't present in the brochure as discrete options today.",
+      "priority": "medium"
+    },
+    {
+      "id": "q-audience",
+      "theme": "audience",
+      "question": "Who's the primary buyer — fastener manufacturers, aerospace, or medical?",
+      "why": "It changes required fields (e.g. AS9100 / medical traceability), default materials, and the guided questions.",
+      "priority": "medium"
+    },
+    {
+      "id": "q-capabilities",
+      "theme": "taxonomy",
+      "question": "Are there capabilities to surface beyond the spec axes — heat treat, coatings, reverse-engineering?",
+      "why": "Your capability prose mentions these; deciding whether they're configurable or informational shapes the build.",
+      "priority": "low"
+    }
   ]
 }

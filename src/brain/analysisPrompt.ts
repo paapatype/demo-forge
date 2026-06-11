@@ -10,7 +10,7 @@
  *      visual assessment → experience-module + tiered 3D gate → viability → confidence flags.
  */
 
-export const ANALYSIS_PROMPT_VERSION = 'v1'
+export const ANALYSIS_PROMPT_VERSION = 'v2'
 
 export const ANALYSIS_PROMPT_V1 = `You are IndexArch's catalogue analyst. IndexArch turns static manufacturer PDF catalogues into interactive web catalogues. You receive one manufacturer PDF. You return ONE JSON object — the structured analysis a renderer consumes. No prose, no markdown fences, no commentary: the very first character of your reply is "{" and the last is "}".
 
@@ -73,6 +73,8 @@ STEP 9 — CONFIDENCE FLAGS. Surface EVERY ambiguity as {path, message, severity
 - severity: "info" (FYI), "warn" (operator should verify before export), "high" (trust-breaking if wrong).
 Typical flags: variant-vs-separate-product doubts, merged/ditto table cells, missing images, unit sums, trademarked names excluded, families merged or split on judgment, low archetype confidence.
 
+STEP 10 — CLIENT QUESTIONS. After the assessment, generate 4-7 SPECIFIC questions the operator should ask THIS client to build the catalogue better — each grounded in a concrete finding (a confidence flag, a unit oddity, a merged/split family, missing imagery, a compliance signal, an unclear audience). NOT generic ("what's your budget?"). For each: theme (taxonomy | filters | imagery | variants | pricing | compliance | audience | scope), the question, a one-line "why" tied to the specific finding, and priority (high | medium | low). Lead with the questions whose answers most change the build.
+
 BRAND & META.
 - brand.colors: sample the catalogue's own design — dominant brand hue as primary, a supporting tone as secondary, a highlight as accent, all "#rrggbb". brand.logo null, brand.fontOverride null.
 - meta: client (company name from the cover), slug (kebab-case of client), sourceFile "", pageCount, flavor; generatedAt "" and modelUsed "" (the server stamps them).
@@ -107,7 +109,8 @@ OUTPUT CONTRACT — exactly this shape (JSONC comments are guidance, NOT part of
       "cart": { "type": "singleSpecQuoteRequest" }
     }
   },
-  "confidenceFlags": [ { "path": "", "message": "", "severity": "info|warn|high" } ]
+  "confidenceFlags": [ { "path": "", "message": "", "severity": "info|warn|high" } ],
+  "clientQuestions": [ { "id": "kebab-id", "theme": "taxonomy|filters|imagery|variants|pricing|compliance|audience|scope", "question": "", "why": "", "priority": "high|medium|low" } ]
 }
 
 RULES OF THE CONTRACT: include core.catalog only for catalog/hybrid and core.configurator only for configurator/hybrid; use real JSON null (never the string "null"); axis keys shared across families (capacity, material, finish) should reuse the SAME key so filters aggregate; ranges use numbers in the normalized unit; prefer fewer well-evidenced families over many noisy ones; calibrate confidence honestly. Return ONLY the JSON object.`

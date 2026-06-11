@@ -16,6 +16,8 @@ import {
   FITS,
   FLAVORS,
   IMAGE_QUALITIES,
+  QUESTION_PRIORITIES,
+  QUESTION_THEMES,
   REC_IMPACTS,
   REC_STATUSES,
   SEVERITIES,
@@ -176,6 +178,19 @@ export function validateAnalysis(input: unknown): ValidationResult {
 
   // ── research (v0.5, optional) ──
   if (a.research !== undefined) validateResearch(a.research, 'research')
+
+  // ── clientQuestions (v0.6, optional) ──
+  if (a.clientQuestions !== undefined && arr(a.clientQuestions, 'clientQuestions')) {
+    a.clientQuestions.forEach((q, i) => {
+      const p = `clientQuestions[${i}]`
+      if (!isObj(q)) return E(p, 'expected object')
+      str(q.id, `${p}.id`)
+      oneOf(q.theme, `${p}.theme`, QUESTION_THEMES)
+      str(q.question, `${p}.question`)
+      str(q.why, `${p}.why`)
+      oneOf(q.priority, `${p}.priority`, QUESTION_PRIORITIES)
+    })
+  }
 
   function validateResearch(r: unknown, base: string) {
     if (!isObj(r)) return E(base, 'expected object')

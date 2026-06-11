@@ -2,13 +2,15 @@ import { useAnalysisStore } from '../../store/useAnalysisStore'
 import { FIXTURE_LABELS, type FixtureKey } from '../../brain/mock'
 import { IS_MOCK } from '../../brain/client'
 import { hasApiKey } from '../../settings/apiKey'
+import { useServerKeyActive } from '../../settings/serverStatus'
 import Dropzone from './Dropzone'
 import { Sparkle } from './icons'
 
 export default function EmptyState() {
   const runAnalyze = useAnalysisStore((s) => s.runAnalyze)
   const loadFixtureNow = useAnalysisStore((s) => s.loadFixtureNow)
-  const needsKey = !hasApiKey() && !IS_MOCK
+  const serverKeyActive = useServerKeyActive()
+  const needsKey = !hasApiKey() && !IS_MOCK && !serverKeyActive
 
   return (
     <div className="grid min-h-full place-items-center px-8 py-16">
@@ -31,6 +33,13 @@ export default function EmptyState() {
             To analyze your own PDF, add your Anthropic API key in{' '}
             <span className="font-medium text-charcoal">Settings</span> (the gear, top-right) — it
             stays in your browser. The demo catalogues below need no key.
+          </p>
+        )}
+        {serverKeyActive && (
+          <p className="mt-3 flex items-center gap-2 font-sans text-xs leading-relaxed text-charcoal-muted">
+            <span className="h-1.5 w-1.5 rounded-full bg-status-good" />
+            Running locally — your key lives in <span className="font-mono text-[11px]">.env</span> on
+            this machine, never in the browser. Drop a real PDF to analyze it.
           </p>
         )}
 

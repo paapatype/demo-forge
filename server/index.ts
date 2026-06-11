@@ -36,6 +36,12 @@ app.post('/api/analyze', upload.single('pdf'), async (req, res) => {
   }
 })
 
+// Lets the client know it's running against the local server, and whether the key is configured —
+// so the UI can drop the "add your key in the browser" nag and analyze for real with no browser key.
+app.get('/api/health', (_req, res) => {
+  res.json({ ok: true, keyLoaded: !!process.env.ANTHROPIC_API_KEY })
+})
+
 app.get('/api/library', async (_req, res) => {
   res.json(await listEntries())
 })

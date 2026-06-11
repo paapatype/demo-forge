@@ -3,6 +3,7 @@ import { useAnalysisStore } from '../../store/useAnalysisStore'
 import { FIXTURE_LABELS, type FixtureKey } from '../../brain/mock'
 import { IS_MOCK } from '../../brain/client'
 import { hasApiKey } from '../../settings/apiKey'
+import { useServerKeyActive } from '../../settings/serverStatus'
 import Dropzone from '../common/Dropzone'
 import ApproveBuild from '../export/ApproveBuild'
 import BuildCatalogue from '../export/BuildModal'
@@ -17,9 +18,11 @@ export default function TopBar() {
   const mockFixture = useAnalysisStore((s) => s.mockFixture)
   const reset = useAnalysisStore((s) => s.reset)
   const [settingsOpen, setSettingsOpen] = useState(false)
+  const serverKeyActive = useServerKeyActive()
 
-  // Closing the modal re-renders the bar, refreshing the "needs key" dot.
-  const needsKey = !hasApiKey() && !IS_MOCK
+  // The local server holding the key (or a browser key, or mock) all mean "no nag needed".
+  // Closing the modal re-renders the bar, refreshing the dot.
+  const needsKey = !hasApiKey() && !IS_MOCK && !serverKeyActive
 
   return (
     <header className="z-20 flex h-14 shrink-0 items-center gap-4 border-b border-cream-300 bg-cream/90 px-5 backdrop-blur">
@@ -59,6 +62,18 @@ export default function TopBar() {
             ))}
           </select>
         </label>
+
+        {serverKeyActive && (
+          <span
+            className="hidden items-center gap-1.5 rounded-sm border border-cream-300 bg-surface px-2.5 py-1 md:inline-flex"
+            title="Running locally — the server holds your API key from .env. No browser key needed."
+          >
+            <span className="h-1.5 w-1.5 rounded-full bg-status-good" />
+            <span className="font-mono text-[10px] uppercase tracking-wider text-charcoal-muted">
+              Local key
+            </span>
+          </span>
+        )}
 
         <button
           type="button"

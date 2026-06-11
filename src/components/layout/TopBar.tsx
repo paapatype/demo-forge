@@ -5,6 +5,7 @@ import { IS_MOCK } from '../../brain/client'
 import { hasApiKey } from '../../settings/apiKey'
 import Dropzone from '../common/Dropzone'
 import ApproveBuild from '../export/ApproveBuild'
+import BuildCatalogue from '../export/BuildModal'
 import LibraryDrawer from '../export/LibraryDrawer'
 import SettingsModal from './SettingsModal'
 import { Gear } from '../common/icons'
@@ -73,6 +74,7 @@ export default function TopBar() {
 
         <LibraryDrawer />
         {analysis && <Dropzone compact onFile={(f) => runAnalyze(f)} />}
+        {analysis && <BuildCatalogue />}
         {analysis && <ApproveBuild />}
       </div>
 

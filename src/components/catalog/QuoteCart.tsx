@@ -17,7 +17,7 @@ export default function QuoteCart() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="fixed bottom-6 right-6 z-30 inline-flex items-center gap-2 bg-charcoal px-4 py-3 text-cream shadow-lg transition-transform duration-150 hover:scale-105 xl:right-[424px]"
+        className="df-quote-fab fixed bottom-6 right-6 z-30 inline-flex items-center gap-2 bg-charcoal px-4 py-3 text-cream shadow-lg transition-transform duration-150 hover:scale-105 xl:right-[424px]"
       >
         <Cart size={18} />
         <span className="font-sans text-sm font-medium">Quote</span>

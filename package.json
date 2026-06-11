@@ -8,7 +8,7 @@
     "dev": "concurrently -n client,server -c blue,green \"npm:client\" \"npm:server\"",
     "client": "vite",
     "server": "tsx watch server/index.ts",
-    "build": "vite build",
+    "build": "vite build && vite build --config vite.viewer.config.ts",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.server.json"
   },

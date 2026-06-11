@@ -1,0 +1,32 @@
+{
+  "id": "good-better-best",
+  "name": "Good-better-best framing",
+  "logic": "Present three tiers and most buyers pick the middle — and a premium 'best' anchors the range so the 'better' looks reasonable. For a manufacturer catalogue this turns a flat SKU grid into a guided decision: single-wall (good), double-wall (better), ripple-wall (best). HBR's research shows good-better-best both attracts price-sensitive buyers with the 'good' option and lifts spend from those who want more, with the middle tier the most-chosen. Pair it with a clear comparison table and you've replaced 'which do I need?' with an obvious answer.",
+  "applicableArchetypes": ["catalog", "hybrid", "configurator"],
+  "applicableIndustries": ["all"],
+  "evidence": [
+    {
+      "title": "The Good-Better-Best Approach to Pricing",
+      "url": "https://hbr.org/2018/09/the-good-better-best-approach-to-pricing",
+      "kind": "article",
+      "note": "Rafi Mohammed, HBR Sep–Oct 2018: a 'good' tier attracts new customers, 'best' lifts spend; the middle option is the most-selected."
+    },
+    {
+      "title": "Comparison Tables for Products, Services, and Features",
+      "url": "https://www.nngroup.com/articles/comparison-tables/",
+      "kind": "article",
+      "note": "NN/g: comparison is a critical pre-purchase activity; prebuilt tables (≤5 options) help users decide quickly."
+    }
+  ],
+  "exemplars": [
+    {
+      "name": "Allstate 'Your Choice' tiers",
+      "url": "https://www.allstate.com/",
+      "why": "HBR's cited example — value/standard/premium tiers; 3.9M policies sold by 2008."
+    }
+  ],
+  "metricsNote": "Most buyers choose the middle of three tiers (HBR); choice overload falls when options are clearly differentiated.",
+  "reviewStatus": "verified",
+  "lastReviewed": "2026-06-11",
+  "version": "1.0.0"
+}

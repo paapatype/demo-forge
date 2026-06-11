@@ -1,0 +1,112 @@
+{
+  "industryRead": {
+    "industry": "Precision thread-rolling and form tooling (made-to-order)",
+    "buyerProfile": "Manufacturing and quality engineers specifying tooling by thread form, size, material, and tolerance — technical, spec-led, RFQ-driven.",
+    "channelNotes": "No SKUs: every order is a specification plus a quote. Licensed thread systems are capabilities, not products, and must never be merchandised as catalogue items."
+  },
+  "claims": [
+    {
+      "id": "c-known",
+      "text": "Engineering buyers split into known-item (they already have a drawing/part) and exploratory (scoping capability); both must be served — drawing/profile submission AND guided spec entry.",
+      "sources": [
+        { "title": "NN/g — E-Commerce UX: Search incl. Faceted Search", "url": "https://www.nngroup.com/reports/ecommerce-ux-search-including-faceted-search/", "kind": "study" }
+      ],
+      "verdict": "verified",
+      "reviewerNote": ""
+    },
+    {
+      "id": "c-rfq",
+      "text": "Made-to-order tooling has no price tag; the conversion event is a single fully-specified quote request, and B2B buyers prefer self-serve up to that point (~17% of time with suppliers; a majority prefer rep-free).",
+      "sources": [
+        { "title": "Gartner — The B2B Buying Journey", "url": "https://www.gartner.com/en/sales/insights/b2b-buying-journey", "kind": "study" }
+      ],
+      "verdict": "verified",
+      "reviewerNote": ""
+    },
+    {
+      "id": "c-compare",
+      "text": "A comparison view of thread forms and tolerance classes helps engineers decide faster — comparison is a critical pre-decision activity.",
+      "sources": [
+        { "title": "NN/g — Comparison Tables for Products, Services, and Features", "url": "https://www.nngroup.com/articles/comparison-tables/", "kind": "article" }
+      ],
+      "verdict": "verified",
+      "reviewerNote": ""
+    },
+    {
+      "id": "c-tiers",
+      "text": "Tiering lead-time / capability options (standard, expedited, full-custom) guides specification and anchors value.",
+      "sources": [
+        { "title": "HBR — The Good-Better-Best Approach to Pricing", "url": "https://hbr.org/2018/09/the-good-better-best-approach-to-pricing", "kind": "article" }
+      ],
+      "verdict": "plausible",
+      "reviewerNote": "Good-better-best is well-evidenced for products; applying it to bespoke-tooling lead-time tiers is by extension — confirm with Meridian before pitching."
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "rec-guided",
+      "familyId": null,
+      "patternId": "known-item-vs-browse",
+      "title": "Offer both 'submit a drawing' and 'guide me by spec'",
+      "rationale": "Some engineers arrive with a STEP/DXF and a part in hand; others are scoping a job. Serve both — a submission path for the known-item buyer, a guided spec flow for the explorer — and neither has to wear the other's shoes.",
+      "claimIds": ["c-known"],
+      "impact": "high",
+      "status": "proposed",
+      "wiring": { "enableModules": [] }
+    },
+    {
+      "id": "rec-rfq",
+      "familyId": null,
+      "patternId": "quote-cart-as-rfq",
+      "title": "Single-spec quote request as the conversion event",
+      "rationale": "There's no checkout for bespoke tooling. Capture the fully-specified ask — thread form, size, material, tolerance, volume — as a qualified RFQ while the buyer is still self-serving.",
+      "claimIds": ["c-rfq"],
+      "impact": "high",
+      "status": "proposed",
+      "wiring": { "enableModules": [] }
+    },
+    {
+      "id": "rec-compare",
+      "familyId": null,
+      "patternId": "good-better-best",
+      "title": "Add a thread-form / tolerance comparison view",
+      "rationale": "A clear comparison of forms and tolerance classes (and standard vs expedited vs full-custom lead-time tiers) speeds specification and anchors the premium option.",
+      "claimIds": ["c-compare", "c-tiers"],
+      "impact": "medium",
+      "status": "proposed",
+      "wiring": { "enableModules": [] }
+    }
+  ],
+  "exemplars": [
+    { "name": "Misumi", "url": "https://www.misumi-ec.com/", "why": "Configure-and-quote at scale — the cart is a specification, not a checkout." },
+    { "name": "McMaster-Carr", "url": "https://www.mcmaster.com/", "why": "Serves part-number known-item lookups and parametric browse side by side." }
+  ],
+  "valuePitch": {
+    "headline": "Turn a capability brochure into a spec-and-quote engine.",
+    "narrative": "Meridian's brochure tells engineers what's possible; it doesn't let them DO anything. The configurator preview turns capability prose into a guided specification — thread form, size, material, tolerance — that ends in a single, fully-specified quote request. Engineers who already have a drawing submit it; those scoping a job get guided. Both arrive at a qualified RFQ carrying its own requirements, instead of a 'contact us' form.",
+    "topMoves": [
+      {
+        "move": "Guided spec entry + drawing submission (serve both buyer modes)",
+        "why": "Engineering buyers split into known-item and exploratory; serving both is standard best practice for technical catalogues.",
+        "claimIds": ["c-known"]
+      },
+      {
+        "move": "Single-spec quote request as the conversion event",
+        "why": "Made-to-order has no checkout; capture the fully-specified ask while the buyer self-serves ~83% of the journey.",
+        "claimIds": ["c-rfq"]
+      },
+      {
+        "move": "Thread-form & tolerance comparison view",
+        "why": "Comparison is a critical pre-decision activity; a clear table speeds specification.",
+        "claimIds": ["c-compare"]
+      }
+    ],
+    "nextStep": "Book a 30-minute call — we'll demo the guided spec flow against Meridian's own capabilities."
+  },
+  "meta": {
+    "researchedAt": "2026-06-11T00:00:00.000Z",
+    "modelUsed": "mock · knowledge-base",
+    "webSearchUsed": false,
+    "promptVersion": "v1"
+  }
+}

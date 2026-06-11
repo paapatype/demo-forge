@@ -1,0 +1,72 @@
+/**
+ * IndexArch design tokens — sampled from the official site (indexarch.com).
+ *
+ * IndexArch runs a deliberately monochromatic, warm system: a sand paper background, near-black
+ * ink, white raised surfaces, and warm hairline rules. Colour (green / terracotta-red) is reserved
+ * for semantic signals. Type is Libre Baskerville (display serif), DM Sans (body), JetBrains Mono
+ * (technical). We keep a restrained terracotta-red (#b5402a, from their own palette) as the warm
+ * accent.
+ *
+ * Two token families:
+ *  1. CHROME (cream=sand / charcoal=ink / terracotta / surface / status) — the framework. Constant.
+ *     Stored as space-separated RGB CHANNELS so Tailwind `<alpha-value>` opacity modifiers work.
+ *  2. Client BRAND (--brand-*) — product presentation only, overridden at runtime as hex.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* ---- Type (official IndexArch families) ---- */
+  --font-serif: 'Libre Baskerville', Georgia, 'Times New Roman', serif; /* display headings */
+  --font-sans: 'DM Sans', 'Helvetica Neue', ui-sans-serif, system-ui, sans-serif; /* body */
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace; /* technical / specs */
+
+  /* ---- Sand (warm paper) — IndexArch "sand"/surface ---- */
+  --c-cream: 250 248 245; /* #faf8f5 app background (sand-50) */
+  --c-cream-200: 240 235 227; /* #f0ebe3 sunken / subtle fill */
+  --c-cream-300: 224 216 206; /* #e0d8ce warm hairline rule */
+
+  /* ---- Terracotta accent — IndexArch verdict-no #b5402a, used sparingly ---- */
+  --c-terracotta: 181 64 42; /* #b5402a */
+  --c-terracotta-light: 231 138 120; /* #e78a78 */
+  --c-terracotta-dark: 154 54 34; /* #9a3622 */
+
+  /* ---- Ink (text) — IndexArch "ink" ---- */
+  --c-charcoal: 26 26 26; /* #1a1a1a primary text + ink CTAs */
+  --c-charcoal-light: 51 51 51; /* #333333 ink-light — button hover (matches indexarch.com) */
+  --c-charcoal-muted: 102 102 102; /* #666666 secondary text */
+  --c-charcoal-faint: 153 153 153; /* #999999 tertiary / placeholder / eyebrows */
+
+  /* ---- Surfaces ---- */
+  --c-surface: 255 255 255; /* #ffffff raised cards (surface-raised) */
+  --c-surface-sunken: 240 235 227; /* #f0ebe3 */
+
+  /* ---- Status / signals (semantic only) ---- */
+  --c-info: 92 82 73; /* #5c5249 warm neutral */
+  --c-warn: 154 107 31; /* #9a6b1f ochre */
+  --c-high: 181 64 42; /* #b5402a verdict-no */
+  --c-good: 47 125 63; /* #2f7d3f verdict-yes */
+
+  /* ---- Client brand (runtime-overridden; neutral hex defaults) ---- */
+  --brand-primary: #2f5d74;
+  --brand-secondary: #5e8499;
+  --brand-accent: #e0a14e;
+
+  /* ---- Spacing (8px base unit; even Tailwind steps: 2=8 4=16 6=24 8=32) ---- */
+  --space-unit: 8px;
+
+  /* ---- Radii ---- */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+
+  /* ---- Shadows (soft, ink-tinted; IndexArch leans on rules, so keep these subtle) ---- */
+  --shadow-sm: 0 1px 2px rgba(26, 26, 26, 0.05), 0 1px 3px rgba(26, 26, 26, 0.04);
+  --shadow: 0 2px 8px rgba(26, 26, 26, 0.06), 0 1px 3px rgba(26, 26, 26, 0.05);
+  --shadow-md: 0 8px 24px rgba(26, 26, 26, 0.08), 0 2px 6px rgba(26, 26, 26, 0.05);
+  --shadow-lg: 0 18px 48px rgba(26, 26, 26, 0.12), 0 6px 16px rgba(26, 26, 26, 0.06);
+
+  /* ---- Motion (IndexArch uses an expo ease-out) ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}

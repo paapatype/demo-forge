@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "client": "Meridian Toolform Ltd.",
+    "slug": "meridian-toolform",
+    "sourceFile": "meridian-toolform-capabilities.pdf",
+    "pageCount": 16,
+    "flavor": "digital",
+    "generatedAt": "2026-06-05T10:00:00.000Z",
+    "modelUsed": "claude-opus-4-8"
+  },
+  "brand": {
+    "logo": null,
+    "colors": { "primary": "#37485A", "secondary": "#6B7785", "accent": "#C7762F" },
+    "fontOverride": null
+  },
+  "archetype": {
+    "primary": "configurator",
+    "confidence": 0.88,
+    "buyerAction": "specify",
+    "evidence": [
+      "Continuous capability prose — 'manufactured to your specification' — not a SKU list.",
+      "Size stated as a continuous span (#0000 → 1.500 in / M0.8 → M39), with no enumerated part numbers.",
+      "Thread forms listed are standard and licensed profiles (UN, ISO, Acme, plus named third-party systems) — capabilities, not products.",
+      "Buyer specifies a requirement (target part, thread form, material, tolerance) and requests a quote."
+    ],
+    "secondary": null
+  },
+  "viability": {
+    "fitForCatalog": "weak",
+    "fitForConfigurator": "strong",
+    "buildComplexity": "high",
+    "notes": "No discrete product table — a guided configurator is the right surface. Specification axes are clear, but constraint logic between thread form, material, and tolerance is non-trivial, so build complexity is high."
+  },
+  "trustSignals": [
+    { "type": "certification", "label": "AS9100D (aerospace)", "couldBeFilter": false },
+    { "type": "certification", "label": "ISO 9001:2015", "couldBeFilter": false },
+    { "type": "certification", "label": "NADCAP — Heat Treat", "couldBeFilter": false },
+    { "type": "standard", "label": "ITAR registered", "couldBeFilter": false }
+  ],
+  "about": {
+    "blurb": "Precision thread-rolling and form tooling, made to order for fastener, aerospace, and medical manufacturing."
+  },
+  "core": {
+    "configurator": {
+      "specAxes": [
+        {
+          "key": "threadSizeRange",
+          "label": "Thread size range",
+          "inputKind": "range",
+          "type": "numericRange",
+          "unit": "mm",
+          "values": null,
+          "range": { "min": 0.8, "max": 39 },
+          "helpText": "Metric M0.8–M39 or imperial #0000–1.500 in. State the target nominal diameter.",
+          "constraints": "Diameters below M1 require a fine-pitch capability review before quoting."
+        },
+        {
+          "key": "threadForm",
+          "label": "Thread form",
+          "inputKind": "select",
+          "type": "categorical",
+          "unit": null,
+          "values": [
+            "UN / UNF / UNJ",
+            "ISO metric",
+            "Acme / trapezoidal",
+            "Buttress",
+            "BSPP / BSPT",
+            "NPT tapered"
+          ],
+          "range": null,
+          "helpText": "Standard and licensed profiles are supported. Licensed third-party thread systems are capabilities, not catalogue products.",
+          "constraints": "Some aerospace profiles require customer-supplied licensing documentation."
+        },
+        {
+          "key": "material",
+          "label": "Workpiece material",
+          "inputKind": "select",
+          "type": "categorical",
+          "unit": null,
+          "values": [
+            "Carbon steel",
+            "Stainless (300/400 series)",
+            "Titanium",
+            "Inconel / superalloy",
+            "Aluminium",
+            "Brass"
+          ],
+          "range": null,
+          "helpText": "Drives die hardness, coating, and expected tool life.",
+          "constraints": null
+        },
+        {
+          "key": "targetPart",
+          "label": "Target part type",
+          "inputKind": "select",
+          "type": "categorical",
+          "unit": null,
+          "values": [
+            "Bolt / machine screw",
+            "Stud",
+            "Bone screw (medical)",
+            "Aerospace fastener",
+            "Lead / power screw",
+            "Hydraulic fitting"
+          ],
+          "range": null,
+          "helpText": "What you will produce on the finished tool.",
+          "constraints": null
+        },
+        {
+          "key": "toleranceClass",
+          "label": "Tolerance class",
+          "inputKind": "select",
+          "type": "categorical",
+          "unit": null,
+          "values": ["6g / 6H", "4h / 4H5H", "Class 2A/2B", "Class 3A/3B"],
+          "range": null,
+          "helpText": "Tighter classes increase die grind and inspection time.",
+          "constraints": null
+        },
+        {
+          "key": "annualVolume",
+          "label": "Annual volume",
+          "inputKind": "number",
+          "type": "numericRange",
+          "unit": "parts/yr",
+          "values": null,
+          "range": { "min": 1000, "max": 50000000 },
+          "helpText": "Drives die material and coating selection for wear life.",
+          "constraints": null
+        }
+      ],
+      "capabilities": [
+        {
+          "title": "Cylindrical & flat-die thread rolling",
+          "body": "Rolled threads for superior fatigue life and grain flow versus cut threads, from miniature to heavy fasteners."
+        },
+        {
+          "title": "Thread & profile grinding",
+          "body": "Ground dies and rolls for tight tolerance classes and complex or non-standard forms."
+        },
+        {
+          "title": "In-house heat treat & coating",
+          "body": "NADCAP heat treat plus nitride and PVD coatings tuned to the workpiece material for tool life."
+        },
+        {
+          "title": "Reverse-engineering & sample matching",
+          "body": "Submit a sample or a worn tool; we reverse the profile and reproduce or improve it."
+        }
+      ],
+      "technicalLibrary": [
+        {
+          "name": "Thread rolling vs cutting — selection guide",
+          "kind": "Application note",
+          "note": "When rolling wins on fatigue life, material savings, and surface finish."
+        },
+        {
+          "name": "Workpiece hardness vs die-life chart",
+          "kind": "Reference chart",
+          "note": "Expected tool life bands by material hardness and coating."
+        },
+        {
+          "name": "ISO 5408 thread terminology",
+          "kind": "Standard reference",
+          "note": "Terminology used throughout our quotations and drawings."
+        },
+        {
+          "name": "DXF / STEP submission template",
+          "kind": "Template",
+          "note": "How to submit a target thread profile for quotation."
+        }
+      ],
+      "cart": { "type": "singleSpecQuoteRequest" }
+    }
+  },
+  "confidenceFlags": [
+    {
+      "path": "core.configurator.specAxes[1]",
+      "message": "Thread-form names include licensed and third-party systems. These are CAPABILITIES, not products — they must never be scraped into a SKU list. Excluded accordingly.",
+      "severity": "high"
+    },
+    {
+      "path": "core.configurator.specAxes[0]",
+      "message": "Size is a continuous span (#0000 → 1.500 in / M0.8 → M39); recorded as a range rather than enumerated part numbers.",
+      "severity": "info"
+    },
+    {
+      "path": "archetype",
+      "message": "Capability-led brochure with no discrete SKU table — classified as a configurator. Catalogue fit is weak; do not force a product grid.",
+      "severity": "info"
+    }
+  ]
+}

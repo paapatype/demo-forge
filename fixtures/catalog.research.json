@@ -1,0 +1,164 @@
+{
+  "industryRead": {
+    "industry": "Sustainable foodservice packaging",
+    "buyerProfile": "Procurement and operations buyers at cafés, caterers, and distributors — spec-driven (capacity, material, compliance), price-negotiated, reorder-heavy.",
+    "channelNotes": "B2B: orders are quotes, not checkouts. Compliance (FSC, EN 13432 compostable, food-contact) is frequently a hard gate, not a nice-to-have."
+  },
+  "claims": [
+    {
+      "id": "c-filter",
+      "text": "Faceted spec filtering is the highest-leverage merchandising move for a SKU catalogue — optimized product lists cut abandonment from 67–90% to 17–33%.",
+      "sources": [
+        { "title": "Baymard — E-Commerce Product List Usability Benchmark", "url": "https://baymard.com/blog/ecommerce-product-lists-report-and-benchmark", "kind": "study" }
+      ],
+      "verdict": "verified",
+      "reviewerNote": ""
+    },
+    {
+      "id": "c-selfserve",
+      "text": "B2B buyers complete most of the journey rep-free and spend only ~17% of buying time with suppliers, so self-serve discovery plus RFQ capture intent better than a contact form.",
+      "sources": [
+        { "title": "Gartner — The B2B Buying Journey", "url": "https://www.gartner.com/en/sales/insights/b2b-buying-journey", "kind": "study" }
+      ],
+      "verdict": "verified",
+      "reviewerNote": ""
+    },
+    {
+      "id": "c-scale",
+      "text": "42% of users try to gauge a product's size from its images; without an in-scale visual they hesitate or mis-order.",
+      "sources": [
+        { "title": "Baymard — Provide at Least One 'In Scale' Image", "url": "https://baymard.com/blog/in-scale-product-images", "kind": "study" }
+      ],
+      "verdict": "verified",
+      "reviewerNote": "Stat re-read directly from the source on 2026-06-11."
+    },
+    {
+      "id": "c-swatch",
+      "text": "54% of e-commerce sites fail to reflect the chosen finish/colour in the product image; swatch switching that re-renders the preview reduces wrong orders and upsells premium finishes.",
+      "sources": [
+        { "title": "Baymard — Thumbnails Should Update to Match the Variation (54% Don't)", "url": "https://baymard.com/blog/color-and-variation-searches", "kind": "study" }
+      ],
+      "verdict": "verified",
+      "reviewerNote": "Stat re-read directly from the source on 2026-06-11."
+    },
+    {
+      "id": "c-gbb",
+      "text": "Framing wall-types as good-better-best (single / double / ripple) guides buyers to the middle tier and anchors the premium option; the middle tier is most-chosen.",
+      "sources": [
+        { "title": "HBR — The Good-Better-Best Approach to Pricing", "url": "https://hbr.org/2018/09/the-good-better-best-approach-to-pricing", "kind": "article" },
+        { "title": "NN/g — Comparison Tables for Products", "url": "https://www.nngroup.com/articles/comparison-tables/", "kind": "article" }
+      ],
+      "verdict": "verified",
+      "reviewerNote": ""
+    },
+    {
+      "id": "c-certs",
+      "text": "Procurement buyers treat certifications (FSC, EN 13432) as hard gates; making them filterable turns a compliance objection into a funnel.",
+      "sources": [
+        { "title": "Baymard — Product List Usability Benchmark (filter by decision-driving attributes)", "url": "https://baymard.com/blog/ecommerce-product-lists-report-and-benchmark", "kind": "study" }
+      ],
+      "verdict": "plausible",
+      "reviewerNote": "Supported by general filtering research applied to compliance by extension — no certification-specific study. Verify before putting in front of a client."
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "rec-filter",
+      "familyId": null,
+      "patternId": "parametric-filtering",
+      "title": "Lead with capacity + material + finish filtering",
+      "rationale": "Your buyers shop by spec, not product name. The derived filter bar collapses 12 families to the few that match in seconds — the McMaster-Carr pattern engineers already trust — and does the qualifying your sales desk does today.",
+      "claimIds": ["c-filter", "c-selfserve"],
+      "impact": "high",
+      "status": "proposed",
+      "wiring": { "enableModules": [] }
+    },
+    {
+      "id": "rec-gbb",
+      "familyId": null,
+      "patternId": "good-better-best",
+      "title": "Frame hot cups as good / better / best",
+      "rationale": "Single-wall (good), double-wall (better), ripple-wall (best) turns a flat grid into a guided decision and anchors the premium ripple wall — most buyers pick the middle, lifting average spec.",
+      "claimIds": ["c-gbb"],
+      "impact": "high",
+      "status": "proposed",
+      "wiring": { "enableModules": [] }
+    },
+    {
+      "id": "rec-context-food",
+      "familyId": "food-containers",
+      "patternId": "context-photography",
+      "title": "Add in-use context shots to Hot Food Containers",
+      "rationale": "Containers sell on the application — show them filled, on a counter, in a bag. Buyers buy the outcome; a context shot lets them self-qualify for their use case.",
+      "claimIds": ["c-scale"],
+      "impact": "medium",
+      "status": "proposed",
+      "wiring": { "enableModules": ["contextVisualizer"] }
+    },
+    {
+      "id": "rec-swatch",
+      "familyId": null,
+      "patternId": "swatch-switching",
+      "title": "Lean on print-finish swatches to upsell custom print",
+      "rationale": "Showing full-colour print beside plain kraft, live on the cup, is the cheapest upsell you have — and stops buyers ordering the wrong finish.",
+      "claimIds": ["c-swatch"],
+      "impact": "medium",
+      "status": "proposed",
+      "wiring": { "enableModules": [] }
+    },
+    {
+      "id": "rec-certs",
+      "familyId": null,
+      "patternId": "certs-as-filters",
+      "title": "Promote FSC / compostable to buyer-facing filters",
+      "rationale": "Compliance is a hard gate in procurement. A 'compostable' filter turns 'do you even have…?' into a one-click path to the compliant range.",
+      "claimIds": ["c-certs"],
+      "impact": "medium",
+      "status": "proposed",
+      "wiring": { "enableModules": [] }
+    },
+    {
+      "id": "rec-rfq",
+      "familyId": null,
+      "patternId": "quote-cart-as-rfq",
+      "title": "Make the multi-line quote the conversion event",
+      "rationale": "Don't force checkout on negotiated B2B pricing. The quote basket captures a qualified, fully-specified lead instead of a 'please call me'.",
+      "claimIds": ["c-selfserve"],
+      "impact": "high",
+      "status": "proposed",
+      "wiring": { "enableModules": [] }
+    }
+  ],
+  "exemplars": [
+    { "name": "McMaster-Carr", "url": "https://www.mcmaster.com/", "why": "The reference for parametric filtering on a deep parts catalogue." },
+    { "name": "IKEA", "url": "https://www.ikea.com/", "why": "In-scale and in-situ imagery so buyers never guess size or use." }
+  ],
+  "valuePitch": {
+    "headline": "Your PDF can't answer a buyer's first three questions. The web catalogue answers them in ten seconds.",
+    "narrative": "Verdant's catalogue is a beautiful PDF that makes the buyer work: to find a compostable 12 oz double-wall cup they scroll, squint at a spec table, and email your desk. The interactive catalogue turns that into capacity + material + finish filters (the McMaster-Carr pattern your buyers already trust), to-scale cup lineups, and print-finish swatches that upsell custom print — then captures the order as a multi-line quote, not a dead 'contact us'. Every move below traces to named e-commerce UX and B2B-buying research.",
+    "topMoves": [
+      {
+        "move": "Parametric capacity + material + finish filtering",
+        "why": "B2B buyers shop by spec; optimized lists cut abandonment from 67–90% to 17–33%, and self-serve carries ~83% of the journey.",
+        "claimIds": ["c-filter", "c-selfserve"]
+      },
+      {
+        "move": "Size-to-scale cup lineups",
+        "why": "42% of buyers try to judge size from images; showing the family to scale removes the hesitation that loses the order.",
+        "claimIds": ["c-scale"]
+      },
+      {
+        "move": "Print-finish swatches that re-render the cup",
+        "why": "54% of sites don't reflect the chosen finish; doing it prevents wrong orders and upsells premium print.",
+        "claimIds": ["c-swatch"]
+      }
+    ],
+    "nextStep": "Book a 30-minute call — we'll demo Verdant's own catalogue, live and branded, filtering in real time."
+  },
+  "meta": {
+    "researchedAt": "2026-06-11T00:00:00.000Z",
+    "modelUsed": "mock · knowledge-base",
+    "webSearchUsed": false,
+    "promptVersion": "v1"
+  }
+}

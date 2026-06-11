@@ -1,0 +1,26 @@
+{
+  "id": "size-to-scale",
+  "name": "Size-to-scale visualization",
+  "logic": "'12 oz' or 'Ø90 mm' is a number, not a mental image — and a buyer who can't picture the size hesitates or mis-orders. Showing the whole family to scale, or a product against a familiar reference, gives the instant physical grasp they'd get in a showroom. Baymard found 42% of users actively try to judge a product's size from its images, yet 28% of major retailers give them nothing to scale against — an own goal you fix with a single rendered lineup.",
+  "applicableArchetypes": ["catalog", "hybrid"],
+  "applicableIndustries": ["all"],
+  "evidence": [
+    {
+      "title": "Product Page UX: Provide at Least One 'In Scale' Image",
+      "url": "https://baymard.com/blog/in-scale-product-images",
+      "kind": "study",
+      "note": "Verified 2026-06-11: '42% of users will attempt to gauge the overall scale and size of a product from its product images'; '28% of sites do not provide any In Scale images' across 60 major retailers."
+    }
+  ],
+  "exemplars": [
+    {
+      "name": "IKEA",
+      "url": "https://www.ikea.com/",
+      "why": "Dimension overlays and to-scale room context are core to every product page — buyers never guess size."
+    }
+  ],
+  "metricsNote": "42% of users try to judge product size from images (Baymard, verified).",
+  "reviewStatus": "verified",
+  "lastReviewed": "2026-06-11",
+  "version": "1.0.0"
+}

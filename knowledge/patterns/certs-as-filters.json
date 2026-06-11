@@ -1,0 +1,26 @@
+{
+  "id": "certs-as-filters",
+  "name": "Certifications as filters, not footnotes",
+  "logic": "In procurement, a certification isn't a trust badge in the footer — it's a hard gate. 'Must be FSC.' 'Must be EN 13432 compostable.' 'Must be food-contact safe.' When compliance is a filterable attribute, you turn a buyer's non-negotiable constraint into a one-click path to exactly the compliant products — and turn an objection ('do you even have…?') into a funnel. Buyers expect to filter by the attributes that actually drive their decision; in B2B, certifications sit at the top of that list.",
+  "applicableArchetypes": ["catalog", "hybrid"],
+  "applicableIndustries": ["packaging", "food-service", "building-products", "industrial", "chemicals"],
+  "evidence": [
+    {
+      "title": "E-Commerce Product List Usability — Report & Benchmark",
+      "url": "https://baymard.com/blog/ecommerce-product-lists-report-and-benchmark",
+      "kind": "study",
+      "note": "Baymard: buyers expect to filter by the attributes that drive their decision. Applied here to compliance certifications BY EXTENSION — no certification-specific study cited, hence partial."
+    }
+  ],
+  "exemplars": [
+    {
+      "name": "Grainger compliance filters",
+      "url": "https://www.grainger.com/",
+      "why": "Lets buyers filter MRO products by compliance and standards attributes."
+    }
+  ],
+  "metricsNote": "Evidence is by extension from general filtering research — no certification-specific study. Flagged partial; verify before using in a pitch.",
+  "reviewStatus": "partial",
+  "lastReviewed": "2026-06-11",
+  "version": "1.0.0"
+}

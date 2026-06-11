@@ -1,0 +1,31 @@
+{
+  "id": "known-item-vs-browse",
+  "name": "Known-item vs exploratory paths",
+  "logic": "Two buyers hit your catalogue: the repeat customer who knows the part number and wants to type 'VPC-DWH-12' and go, and the new buyer who needs to browse and filter their way to the right family. Serve both — a part-number search box for the known-item buyer, faceted browse for the explorer — and never make one wear the other's shoes. NN/g's e-commerce search research shows search and faceted navigation must support both narrowing to a known item and open-ended exploration; conflating them frustrates everyone.",
+  "applicableArchetypes": ["catalog", "hybrid"],
+  "applicableIndustries": ["industrial-components", "mro", "electronics", "fasteners", "building-products"],
+  "evidence": [
+    {
+      "title": "E-Commerce UX: Search, incl. Faceted Search (Report)",
+      "url": "https://www.nngroup.com/reports/ecommerce-ux-search-including-faceted-search/",
+      "kind": "study",
+      "note": "NN/g: search + faceted navigation must serve both known-item lookups and exploratory browsing; the two behaviours need different affordances."
+    }
+  ],
+  "exemplars": [
+    {
+      "name": "McMaster-Carr",
+      "url": "https://www.mcmaster.com/",
+      "why": "A part-number search box AND deep parametric browse coexist — the reference for serving both buyer modes."
+    },
+    {
+      "name": "Grainger",
+      "url": "https://www.grainger.com/",
+      "why": "MRO catalogue tuned for fast known-item reorder alongside category browse."
+    }
+  ],
+  "metricsNote": "",
+  "reviewStatus": "verified",
+  "lastReviewed": "2026-06-11",
+  "version": "1.0.0"
+}

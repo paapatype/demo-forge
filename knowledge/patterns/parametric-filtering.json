@@ -1,0 +1,32 @@
+{
+  "id": "parametric-filtering",
+  "name": "Parametric spec filtering",
+  "logic": "B2B buyers arrive with a specification, not a product name — they want a 12 oz double-wall cup in kraft, and they want it in seconds. A faceted filter bar that collapses a 150-SKU catalogue to the three matching products replaces the phone call to your sales desk. It's the highest-leverage move on a manufacturer catalogue: Baymard finds only ~16% of e-commerce sites filter well, yet mediocre product lists are abandoned at 67–90% versus 17–33% for optimized ones — and Gartner shows B2B buyers spend only ~17% of their time with suppliers, so the filter is doing the selling while you sleep.",
+  "applicableArchetypes": ["catalog", "hybrid"],
+  "applicableIndustries": ["all"],
+  "evidence": [
+    {
+      "title": "E-Commerce Product List Usability — Report & Benchmark",
+      "url": "https://baymard.com/blog/ecommerce-product-lists-report-and-benchmark",
+      "kind": "study",
+      "note": "9-month large-scale study; only ~16% of sites offer good filtering; mediocre lists abandon at 67–90% vs 17–33% for optimized lists."
+    },
+    {
+      "title": "Gartner — The B2B Buying Journey",
+      "url": "https://www.gartner.com/en/sales/insights/b2b-buying-journey",
+      "kind": "study",
+      "note": "B2B buyers spend only ~17% of total buying time with any potential supplier; most discovery is self-serve."
+    }
+  ],
+  "exemplars": [
+    {
+      "name": "McMaster-Carr",
+      "url": "https://www.mcmaster.com/",
+      "why": "The canonical parametric catalogue — engineers narrow ~700k parts to the exact one in seconds; its information architecture is widely praised."
+    }
+  ],
+  "metricsNote": "Optimized product lists cut abandonment from 67–90% to 17–33% (Baymard).",
+  "reviewStatus": "verified",
+  "lastReviewed": "2026-06-11",
+  "version": "1.0.0"
+}

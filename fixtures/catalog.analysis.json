@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "client": "Verdant Pack Co.",
+    "slug": "verdant-pack",
+    "sourceFile": "verdant-pack-catalogue-2026.pdf",
+    "pageCount": 28,
+    "flavor": "digital",
+    "generatedAt": "2026-06-05T10:00:00.000Z",
+    "modelUsed": "claude-opus-4-8"
+  },
+  "brand": {
+    "logo": null,
+    "colors": { "primary": "#2E7D5B", "secondary": "#8A6A43", "accent": "#D98C3A" },
+    "fontOverride": null
+  },
+  "archetype": {
+    "primary": "catalog",
+    "confidence": 0.93,
+    "buyerAction": "pick",
+    "evidence": [
+      "Table of contents reads as a product taxonomy (Hot Cups, Cold Cups, Containers, Lids, Serviceware).",
+      "20 of 28 pages are product grids with spec tables, not capability prose.",
+      "~158 discrete part numbers counted across the size charts.",
+      "Buyer picks finished SKUs by size, material, and finish — no made-to-order specification step."
+    ],
+    "secondary": null
+  },
+  "viability": {
+    "fitForCatalog": "strong",
+    "fitForConfigurator": "weak",
+    "buildComplexity": "medium",
+    "notes": "Clean product taxonomy with consistent spec tables — strong catalogue fit. Units are heterogeneous (oz/ml capacity, mm rim, gsm board) and must be normalized per family. No configurator surface."
+  },
+  "trustSignals": [
+    { "type": "certification", "label": "FSC® Certified", "couldBeFilter": true },
+    { "type": "certification", "label": "Seedling — EN 13432 compostable", "couldBeFilter": true },
+    { "type": "certification", "label": "PEFC", "couldBeFilter": true },
+    { "type": "standard", "label": "BRCGS Packaging", "couldBeFilter": false },
+    { "type": "standard", "label": "ISO 9001", "couldBeFilter": false }
+  ],
+  "about": {
+    "blurb": "Sustainable foodservice packaging — cups, containers, and serviceware in recycled, recyclable, and compostable materials."
+  },
+  "core": {
+    "catalog": {
+      "families": [
+        {
+          "id": "single-wall-hot",
+          "name": "Single-Wall Hot Cups",
+          "description": "Classic single-wall paper hot cups for coffee and tea, PLA- or aqueous-lined.",
+          "images": [{ "src": null, "missing": false, "quality": "good" }],
+          "experienceModules": ["swatchSwitch", "sizeComparison", "rich2DZoom"],
+          "threeD": { "warranted": false, "tier": "D", "path": null, "cadLikely": false },
+          "variantAxes": [
+            { "key": "capacity", "label": "Capacity", "type": "numericRange", "unit": "oz", "normalizedUnit": "ml", "values": null, "range": { "min": 120, "max": 470 }, "isFilter": true, "isIdentifier": false },
+            { "key": "wallType", "label": "Wall", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["single-wall"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "material", "label": "Material", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["paper board"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "finish", "label": "Finish", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["white", "kraft", "full-colour print"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "boardWeight", "label": "Board weight", "type": "numericRange", "unit": "gsm", "normalizedUnit": "gsm", "values": null, "range": { "min": 280, "max": 340 }, "isFilter": false, "isIdentifier": false },
+            { "key": "diameter", "label": "Rim Ø", "type": "dimension", "unit": "mm", "normalizedUnit": "mm", "values": null, "range": { "min": 62, "max": 90 }, "isFilter": false, "isIdentifier": false },
+            { "key": "partNumber", "label": "Part no.", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["VPC-SWH-04", "VPC-SWH-16"], "range": null, "isFilter": false, "isIdentifier": true }
+          ],
+          "skuCount": 24,
+          "presentation": { "cardSize": "md", "detailSize": "lg" },
+          "swatchAxisKey": "finish",
+          "sizeComparisonAxisKey": "capacity"
+        },
+        {
+          "id": "double-wall-hot",
+          "name": "Double-Wall Hot Cups",
+          "description": "Insulated double-wall cups — no sleeve required. Premium hand-feel for takeaway coffee.",
+          "images": [{ "src": null, "missing": false, "quality": "good" }],
+          "experienceModules": ["swatchSwitch", "sizeComparison", "rich2DZoom"],
+          "threeD": { "warranted": false, "tier": "D", "path": null, "cadLikely": false },
+          "variantAxes": [
+            { "key": "capacity", "label": "Capacity", "type": "numericRange", "unit": "oz", "normalizedUnit": "ml", "values": null, "range": { "min": 240, "max": 470 }, "isFilter": true, "isIdentifier": false },
+            { "key": "wallType", "label": "Wall", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["double-wall"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "material", "label": "Material", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["paper board"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "finish", "label": "Finish", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["white", "kraft", "full-colour print"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "boardWeight", "label": "Board weight", "type": "numericRange", "unit": "gsm", "normalizedUnit": "gsm", "values": null, "range": { "min": 280, "max": 435 }, "isFilter": false, "isIdentifier": false },
+            { "key": "diameter", "label": "Rim Ø", "type": "dimension", "unit": "mm", "normalizedUnit": "mm", "values": null, "range": { "min": 80, "max": 90 }, "isFilter": false, "isIdentifier": false },
+            { "key": "partNumber", "label": "Part no.", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["VPC-DWH-08", "VPC-DWH-16"], "range": null, "isFilter": false, "isIdentifier": true }
+          ],
+          "skuCount": 18,
+          "presentation": { "cardSize": "md", "detailSize": "lg" },
+          "swatchAxisKey": "finish",
+          "sizeComparisonAxisKey": "capacity"
+        },
+        {
+          "id": "ripple-wall-hot",
+          "name": "Ripple-Wall Hot Cups",
+          "description": "Fluted ripple-wall cups with extra grip and insulation; natural kraft or white.",
+          "images": [{ "src": null, "missing": false, "quality": "low" }],
+          "experienceModules": ["swatchSwitch", "sizeComparison", "rich2DZoom"],
+          "threeD": { "warranted": false, "tier": "D", "path": null, "cadLikely": false },
+          "variantAxes": [
+            { "key": "capacity", "label": "Capacity", "type": "numericRange", "unit": "oz", "normalizedUnit": "ml", "values": null, "range": { "min": 240, "max": 470 }, "isFilter": true, "isIdentifier": false },
+            { "key": "wallType", "label": "Wall", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["ripple-wall"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "material", "label": "Material", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["paper board"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "finish", "label": "Finish", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["kraft", "white"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "diameter", "label": "Rim Ø", "type": "dimension", "unit": "mm", "normalizedUnit": "mm", "values": null, "range": { "min": 80, "max": 90 }, "isFilter": false, "isIdentifier": false },
+            { "key": "partNumber", "label": "Part no.", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["VPC-RWH-08", "VPC-RWH-16"], "range": null, "isFilter": false, "isIdentifier": true }
+          ],
+          "skuCount": 12,
+          "presentation": { "cardSize": "md", "detailSize": "lg" },
+          "swatchAxisKey": "finish",
+          "sizeComparisonAxisKey": "capacity"
+        },
+        {
+          "id": "pet-cold",
+          "name": "PET Cold Cups",
+          "description": "Crystal-clear PET and rPET cold cups for iced drinks, smoothies, and cold brew.",
+          "images": [{ "src": null, "missing": false, "quality": "good" }],
+          "experienceModules": ["swatchSwitch", "sizeComparison", "rich2DZoom"],
+          "threeD": { "warranted": false, "tier": "D", "path": null, "cadLikely": false },
+          "variantAxes": [
+            { "key": "capacity", "label": "Capacity", "type": "numericRange", "unit": "oz", "normalizedUnit": "ml", "values": null, "range": { "min": 210, "max": 590 }, "isFilter": true, "isIdentifier": false },
+            { "key": "material", "label": "Material", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["PET", "rPET"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "wallType", "label": "Wall", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["single-wall"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "finish", "label": "Finish", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["clear", "single-colour print"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "diameter", "label": "Rim Ø", "type": "dimension", "unit": "mm", "normalizedUnit": "mm", "values": null, "range": { "min": 78, "max": 98 }, "isFilter": false, "isIdentifier": false },
+            { "key": "partNumber", "label": "Part no.", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["VPC-PET-07", "VPC-PET-20"], "range": null, "isFilter": false, "isIdentifier": true }
+          ],
+          "skuCount": 16,
+          "presentation": { "cardSize": "md", "detailSize": "lg" },
+          "swatchAxisKey": "finish",
+          "sizeComparisonAxisKey": "capacity"
+        },
+        {
+          "id": "paper-cold",
+          "name": "Paper Cold Cups",
+          "description": "PLA-lined paper cold cups — a plastic-free alternative for cold and ambient drinks.",
+          "images": [{ "src": null, "missing": false, "quality": "good" }],
+          "experienceModules": ["swatchSwitch", "sizeComparison", "rich2DZoom"],
+          "threeD": { "warranted": false, "tier": "D", "path": null, "cadLikely": false },
+          "variantAxes": [
+            { "key": "capacity", "label": "Capacity", "type": "numericRange", "unit": "oz", "normalizedUnit": "ml", "values": null, "range": { "min": 240, "max": 650 }, "isFilter": true, "isIdentifier": false },
+            { "key": "material", "label": "Material", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["paper board", "PLA-lined"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "wallType", "label": "Wall", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["single-wall"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "finish", "label": "Finish", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["white", "full-colour print"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "diameter", "label": "Rim Ø", "type": "dimension", "unit": "mm", "normalizedUnit": "mm", "values": null, "range": { "min": 80, "max": 90 }, "isFilter": false, "isIdentifier": false },
+            { "key": "partNumber", "label": "Part no.", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["VPC-PCC-08", "VPC-PCC-22"], "range": null, "isFilter": false, "isIdentifier": true }
+          ],
+          "skuCount": 15,
+          "presentation": { "cardSize": "md", "detailSize": "lg" },
+          "swatchAxisKey": "finish",
+          "sizeComparisonAxisKey": "capacity"
+        },
+        {
+          "id": "food-containers",
+          "name": "Hot Food Containers",
+          "description": "Kraft and PLA-lined containers for hot food, salads, and deli — leak-resistant base.",
+          "images": [{ "src": null, "missing": false, "quality": "good" }],
+          "experienceModules": ["swatchSwitch", "sizeComparison", "rich2DZoom"],
+          "threeD": { "warranted": false, "tier": "D", "path": null, "cadLikely": false },
+          "variantAxes": [
+            { "key": "capacity", "label": "Capacity", "type": "numericRange", "unit": "oz", "normalizedUnit": "ml", "values": null, "range": { "min": 240, "max": 950 }, "isFilter": true, "isIdentifier": false },
+            { "key": "material", "label": "Material", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["kraft", "PLA-lined"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "finish", "label": "Finish", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["kraft", "white"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "boardWeight", "label": "Board weight", "type": "numericRange", "unit": "gsm", "normalizedUnit": "gsm", "values": null, "range": { "min": 300, "max": 360 }, "isFilter": false, "isIdentifier": false },
+            { "key": "partNumber", "label": "Part no.", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["VPC-HFC-08", "VPC-HFC-32"], "range": null, "isFilter": false, "isIdentifier": true }
+          ],
+          "skuCount": 20,
+          "presentation": { "cardSize": "md", "detailSize": "lg" },
+          "swatchAxisKey": "finish",
+          "sizeComparisonAxisKey": "capacity"
+        },
+        {
+          "id": "universal-lids",
+          "name": "Universal Lids",
+          "description": "Sip-through, flat, and domed lids sized to the 80 mm and 90 mm cup families.",
+          "images": [{ "src": null, "missing": true, "quality": "none" }],
+          "experienceModules": ["sizeComparison", "rich2DZoom"],
+          "threeD": { "warranted": false, "tier": "D", "path": null, "cadLikely": false },
+          "variantAxes": [
+            { "key": "material", "label": "Material", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["PS", "rPET", "paper"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "lidType", "label": "Lid type", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["flat", "domed", "sip-through"], "range": null, "isFilter": false, "isIdentifier": false },
+            { "key": "diameter", "label": "Fitment Ø", "type": "dimension", "unit": "mm", "normalizedUnit": "mm", "values": null, "range": { "min": 80, "max": 90 }, "isFilter": false, "isIdentifier": false },
+            { "key": "partNumber", "label": "Part no.", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["VPC-LID-80", "VPC-LID-90"], "range": null, "isFilter": false, "isIdentifier": true }
+          ],
+          "skuCount": 14,
+          "presentation": { "cardSize": "md", "detailSize": "lg" },
+          "swatchAxisKey": null,
+          "sizeComparisonAxisKey": "diameter"
+        },
+        {
+          "id": "portion-pots",
+          "name": "Portion Pots & Lids",
+          "description": "Small portion pots for sauces and dressings, with snap lids; PP or paper.",
+          "images": [{ "src": null, "missing": false, "quality": "low" }],
+          "experienceModules": ["swatchSwitch", "sizeComparison", "rich2DZoom"],
+          "threeD": { "warranted": false, "tier": "D", "path": null, "cadLikely": false },
+          "variantAxes": [
+            { "key": "capacity", "label": "Capacity", "type": "numericRange", "unit": "oz", "normalizedUnit": "ml", "values": null, "range": { "min": 30, "max": 120 }, "isFilter": true, "isIdentifier": false },
+            { "key": "material", "label": "Material", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["PP", "paper"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "finish", "label": "Finish", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["white", "kraft"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "partNumber", "label": "Part no.", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["VPC-POT-1", "VPC-POT-4"], "range": null, "isFilter": false, "isIdentifier": true }
+          ],
+          "skuCount": 10,
+          "presentation": { "cardSize": "sm", "detailSize": "md" },
+          "swatchAxisKey": "finish",
+          "sizeComparisonAxisKey": "capacity"
+        },
+        {
+          "id": "kraft-bowls",
+          "name": "Kraft Buddha Bowls",
+          "description": "Wide kraft bowls for poke, salads, and hot meals; PLA-lined, microwavable.",
+          "images": [{ "src": null, "missing": false, "quality": "good" }],
+          "experienceModules": ["swatchSwitch", "sizeComparison", "rich2DZoom"],
+          "threeD": { "warranted": false, "tier": "D", "path": null, "cadLikely": false },
+          "variantAxes": [
+            { "key": "capacity", "label": "Capacity", "type": "numericRange", "unit": "oz", "normalizedUnit": "ml", "values": null, "range": { "min": 470, "max": 1420 }, "isFilter": true, "isIdentifier": false },
+            { "key": "material", "label": "Material", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["kraft", "PLA-lined"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "finish", "label": "Finish", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["kraft"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "boardWeight", "label": "Board weight", "type": "numericRange", "unit": "gsm", "normalizedUnit": "gsm", "values": null, "range": { "min": 320, "max": 360 }, "isFilter": false, "isIdentifier": false },
+            { "key": "partNumber", "label": "Part no.", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["VPC-BWL-16", "VPC-BWL-48"], "range": null, "isFilter": false, "isIdentifier": true }
+          ],
+          "skuCount": 9,
+          "presentation": { "cardSize": "md", "detailSize": "lg" },
+          "swatchAxisKey": "finish",
+          "sizeComparisonAxisKey": "capacity"
+        },
+        {
+          "id": "soup-containers",
+          "name": "Soup Containers",
+          "description": "Double-poly soup containers with vented lids for hot, liquid-heavy food.",
+          "images": [{ "src": null, "missing": false, "quality": "good" }],
+          "experienceModules": ["swatchSwitch", "sizeComparison", "rich2DZoom"],
+          "threeD": { "warranted": false, "tier": "D", "path": null, "cadLikely": false },
+          "variantAxes": [
+            { "key": "capacity", "label": "Capacity", "type": "numericRange", "unit": "oz", "normalizedUnit": "ml", "values": null, "range": { "min": 240, "max": 470 }, "isFilter": true, "isIdentifier": false },
+            { "key": "material", "label": "Material", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["paper board", "PLA-lined"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "finish", "label": "Finish", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["white", "full-colour print"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "partNumber", "label": "Part no.", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["VPC-SUP-08", "VPC-SUP-16"], "range": null, "isFilter": false, "isIdentifier": true }
+          ],
+          "skuCount": 8,
+          "presentation": { "cardSize": "md", "detailSize": "lg" },
+          "swatchAxisKey": "finish",
+          "sizeComparisonAxisKey": "capacity"
+        },
+        {
+          "id": "carrier-trays",
+          "name": "Cup Carrier Trays",
+          "description": "Moulded-pulp carriers for 2 and 4 cups — recycled, recyclable, and stackable.",
+          "images": [{ "src": null, "missing": false, "quality": "good" }],
+          "experienceModules": ["contextVisualizer", "rich2DZoom"],
+          "threeD": { "warranted": false, "tier": "D", "path": null, "cadLikely": false },
+          "variantAxes": [
+            { "key": "material", "label": "Material", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["moulded pulp"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "configuration", "label": "Configuration", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["2-cup", "4-cup"], "range": null, "isFilter": false, "isIdentifier": false },
+            { "key": "partNumber", "label": "Part no.", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["VPC-TRAY-2", "VPC-TRAY-4"], "range": null, "isFilter": false, "isIdentifier": true }
+          ],
+          "skuCount": 4,
+          "presentation": { "cardSize": "md", "detailSize": "lg" },
+          "swatchAxisKey": null,
+          "sizeComparisonAxisKey": null
+        },
+        {
+          "id": "napkins",
+          "name": "Napkins & Serviettes",
+          "description": "Recycled paper napkins in 1-ply and 2-ply; white, kraft, or printed.",
+          "images": [{ "src": null, "missing": false, "quality": "good" }],
+          "experienceModules": ["swatchSwitch", "sizeComparison", "rich2DZoom"],
+          "threeD": { "warranted": false, "tier": "D", "path": null, "cadLikely": false },
+          "variantAxes": [
+            { "key": "material", "label": "Material", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["recycled paper"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "ply", "label": "Ply", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["1-ply", "2-ply"], "range": null, "isFilter": false, "isIdentifier": false },
+            { "key": "finish", "label": "Finish", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["white", "kraft", "printed"], "range": null, "isFilter": true, "isIdentifier": false },
+            { "key": "size", "label": "Size", "type": "dimension", "unit": "mm", "normalizedUnit": "mm", "values": null, "range": { "min": 240, "max": 400 }, "isFilter": false, "isIdentifier": false },
+            { "key": "partNumber", "label": "Part no.", "type": "categorical", "unit": null, "normalizedUnit": null, "values": ["VPC-NAP-24", "VPC-NAP-40"], "range": null, "isFilter": false, "isIdentifier": true }
+          ],
+          "skuCount": 11,
+          "presentation": { "cardSize": "sm", "detailSize": "md" },
+          "swatchAxisKey": "finish",
+          "sizeComparisonAxisKey": "size"
+        }
+      ],
+      "filterSchema": [],
+      "cart": { "type": "multiLineQuoteBuilder" }
+    }
+  },
+  "confidenceFlags": [
+    {
+      "path": "core.catalog.families[1].variantAxes[4]",
+      "message": "Double-wall board weight is stated as a ply sum (195+240 gsm); recorded as 435 — verify the normalization.",
+      "severity": "info"
+    },
+    {
+      "path": "core.catalog.families[6].images[0]",
+      "message": "No product image found for Universal Lids — a placeholder is shown. Replace before export.",
+      "severity": "warn"
+    },
+    {
+      "path": "core.catalog.families[3].variantAxes[1]",
+      "message": "PET and rPET cold cups share one size chart and were merged into a single family. Split them if they sell as distinct lines.",
+      "severity": "info"
+    },
+    {
+      "path": "core.catalog.families[10].variantAxes[1]",
+      "message": "‘2-cup / 4-cup’ was read as a configuration variant, not two separate products — confirm the carriers shouldn't be split.",
+      "severity": "warn"
+    },
+    {
+      "path": "core.catalog.families[11].variantAxes[2]",
+      "message": "Napkin ‘printed’ finishes may include licensed seasonal artwork — confirm none are third-party trademarks before listing.",
+      "severity": "high"
+    }
+  ]
+}

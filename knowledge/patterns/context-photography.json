@@ -1,0 +1,32 @@
+{
+  "id": "context-photography",
+  "name": "Context / in-situ photography",
+  "logic": "Buyers buy an outcome, not an object. A product on a white background answers 'what is it'; the same product on a café counter, a job site, or a human answers 'is this right for MY use case' — the question that actually closes. Application and in-situ shots let a buyer self-qualify at a glance. Baymard's research shows products presented only in isolation leave users unable to judge real-world fit and suitability, especially for anything used in a setting.",
+  "applicableArchetypes": ["catalog", "hybrid"],
+  "applicableIndustries": ["packaging", "food-service", "building-products", "furniture", "architectural"],
+  "evidence": [
+    {
+      "title": "Provide Images of Products on a Human Model / in Context",
+      "url": "https://baymard.com/blog/human-model",
+      "kind": "study",
+      "note": "Isolation-only imagery leaves users unable to judge fit and real-world suitability; context (model, environment) restores it."
+    },
+    {
+      "title": "'In Scale' Images Use Relevant Surroundings",
+      "url": "https://baymard.com/blog/in-scale-product-images",
+      "kind": "study",
+      "note": "Recommends showing the product 'relative to a surrounding environment, humans, or other objects' (verified 2026-06-11)."
+    }
+  ],
+  "exemplars": [
+    {
+      "name": "IKEA room sets",
+      "url": "https://www.ikea.com/",
+      "why": "The canon of in-situ merchandising — products shown in fully styled, lived-in rooms."
+    }
+  ],
+  "metricsNote": "",
+  "reviewStatus": "verified",
+  "lastReviewed": "2026-06-11",
+  "version": "1.0.0"
+}

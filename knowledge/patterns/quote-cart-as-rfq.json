@@ -1,0 +1,37 @@
+{
+  "id": "quote-cart-as-rfq",
+  "name": "Quote cart as the conversion event",
+  "logic": "In B2B, price is negotiated and the order is a quote, not a checkout — so forcing 'add to cart → pay' kills intent. The right conversion event is a multi-line RFQ basket: the buyer assembles exactly what they want, with full spec context, and asks for a quote. You capture a qualified lead that carries its own requirements, instead of a contact-form 'please call me'. Gartner shows B2B buyers run most of the journey rep-free and spend only ~17% of their time with suppliers — so meet them where they are and let them self-assemble the ask.",
+  "applicableArchetypes": ["catalog", "configurator", "hybrid"],
+  "applicableIndustries": ["all"],
+  "evidence": [
+    {
+      "title": "Gartner — 61% of B2B Buyers Prefer a Rep-Free Buying Experience",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-sales-survey-finds-61-percent-of-b2b-buyers-prefer-a-rep-free-buying-experience",
+      "kind": "study",
+      "note": "Gartner newsroom, 2025-06-25. URL resolves; direct fetch is bot-blocked (HTTP 403) so the 61% figure is per Gartner's own release title, not independently re-read."
+    },
+    {
+      "title": "Gartner — The B2B Buying Journey",
+      "url": "https://www.gartner.com/en/sales/insights/b2b-buying-journey",
+      "kind": "study",
+      "note": "Buyers spend only ~17% of buying time with any one supplier — capture intent without forcing a rep call or a card payment."
+    }
+  ],
+  "exemplars": [
+    {
+      "name": "Misumi",
+      "url": "https://www.misumi-ec.com/",
+      "why": "Configure-and-quote B2B flow at scale — the cart is a specification, not a checkout."
+    },
+    {
+      "name": "Grainger",
+      "url": "https://www.grainger.com/",
+      "why": "RFQ / quote tooling built directly into the buying flow."
+    }
+  ],
+  "metricsNote": "B2B buyers spend only ~17% of buying time with suppliers; a majority prefer a rep-free experience (Gartner).",
+  "reviewStatus": "verified",
+  "lastReviewed": "2026-06-11",
+  "version": "1.0.0"
+}

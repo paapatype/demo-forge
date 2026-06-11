@@ -1,0 +1,32 @@
+{
+  "id": "swatch-switching",
+  "name": "Swatch / finish variant switching",
+  "logic": "When a product comes in finishes — kraft vs white vs full-colour print — a text list ('available in 6 finishes') makes the buyer imagine; a row of swatches that re-skins the preview lets them SEE. It's the cheapest upsell you have: showing the premium printed finish beside plain kraft is what moves a buyer up a tier. Baymard found 54% of sites fail to update the product image to the selected variant — buyers should never have to guess what they're actually ordering.",
+  "applicableArchetypes": ["catalog", "hybrid"],
+  "applicableIndustries": ["all"],
+  "evidence": [
+    {
+      "title": "Product Thumbnails Should Update to Match the Variation (54% Don't)",
+      "url": "https://baymard.com/blog/color-and-variation-searches",
+      "kind": "study",
+      "note": "Verified 2026-06-11: '54% to be precise' of e-commerce sites fail to switch the image to the selected colour/variation; dynamic switching is 'absolutely vital'."
+    },
+    {
+      "title": "Synchronize Data Across Product Variations (28% Don't)",
+      "url": "https://baymard.com/blog/synchronize-product-data-across-variations",
+      "kind": "study",
+      "note": "Variation content must stay in sync so buyers don't miss information on the specific option they pick."
+    }
+  ],
+  "exemplars": [
+    {
+      "name": "IKEA variant swatches",
+      "url": "https://www.ikea.com/",
+      "why": "Colour/finish swatches re-render the product image on selection — no imagination required."
+    }
+  ],
+  "metricsNote": "54% of sites don't reflect the chosen variant in the image (Baymard, verified).",
+  "reviewStatus": "verified",
+  "lastReviewed": "2026-06-11",
+  "version": "1.0.0"
+}
